@@ -169,7 +169,7 @@ module_03 <-
                         tabPanel(
                             title = "Reference",
                             h3("Reference"),
-                            includeMarkdown("www/modules/reference_03.md"),
+                            includeMarkdown("www/text/reference_03.md"),
                         ),
                     )
                 )
