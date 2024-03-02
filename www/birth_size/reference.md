@@ -1,0 +1,3 @@
+-   [日本小児科学会新生児委員会報告 新しい在胎期間別出生時体格標準値の導入について](http://www.jpeds.or.jp/modules/guidelines/index.php?content_id=22)
+-   [日本小児科学会新生児委員会報告 新しい在胎期間別出生時体格標準値（修正版）](https://www.jpeds.or.jp/modules/guidelines/index.php?content_id=21)
+-   [SGA 性低身長症におけるGH 治療のガイドライン](http://jspe.umin.jp/medical/gui.html) 日本小児科学会雑誌.2007;111:641-646

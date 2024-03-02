@@ -1,0 +1,2 @@
+- [産婦人科診療ガイドライン産科編2020](https://www.jsog.or.jp/modules/about/index.php?content_id=16)
+- [超音波胎児計測の標準化と日本人の基準値](http://www.jsog-oj.jp/tocTo63.php?-DB=jsog&-LAYOUT=to63&volume=57&issue=1) 日本産科婦人科学会雑誌. 2005;57(1):93-117.

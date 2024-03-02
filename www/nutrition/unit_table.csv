@@ -1,0 +1,8 @@
+element_name,display_name,unit1,digit1,unit2,digit2,coef
+glu,Glu/GIR,%,1,mg/kg/min,1,0.006944444444444444
+aa,AA,g/mL,3,g/kg/day,1,1
+lipid,Lipid,%,1,g/kg/day,1,0.01
+na,Na,mEq/mL,3,mEq/kg/day,1,1
+k,K,mEq/mL,3,mEq/kg/day,1,1
+ca,Ca,mg/mL,3,mg/kg/day,1,1
+p,P,mg/mL,3,mg/kg/day,1,1
