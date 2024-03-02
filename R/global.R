@@ -6,8 +6,12 @@ library(magrittr)
 
 ###############################################################################
 
+print("Loading global.R...")
+
+###############################################################################
+
 body_size <- 
-    "www/body_size.csv" |> 
+    "www/data/birth_size.csv" |> 
     readr::read_csv(
         col_types = cols(.default = col_character())
     ) |> 
@@ -195,7 +199,7 @@ create_bone_length_table <- function(input) {
         )
     
     bone_length <- 
-        "www/bone_length.csv" |> 
+        "www/data/bone_length.csv" |> 
         readr::read_csv(
             col_types = cols(.default = col_character())
         ) |> 
@@ -204,19 +208,18 @@ create_bone_length_table <- function(input) {
         dplyr::mutate(
             measured_rt_z = (measured_rt - as.numeric(mean)) / as.numeric(sd),
             measured_lt_z = (measured_lt - as.numeric(mean)) / as.numeric(sd),
-            across(ends_with("z"), round, digits = 1),
-            across(ends_with("z"), as.character),
-            across(ends_with("z"), ~ifelse(stringr::str_detect(., "-"), ., stringr::str_c("+", .))),
-            across(ends_with("z"), ~ifelse(stringr::str_detect(., "\\."), ., stringr::str_c(., ".0"))),
-            across(ends_with("z"), stringr::str_c, "SD"),
+            across(
+                ends_with("_z"), 
+                \(x) formatC(x, format = "f", digits = 1)
+            )
         )
     
     bone_length |> 
         dplyr::filter(ga == input$bone_length_ga) |> 
         dplyr::select(
             Bone = bone, Mean = mean, SD = sd,
-            `Right (cm)` = measured_rt_z,
-            `Left (cm)` = measured_lt_z,
+            `Z-value (Right)` = measured_rt_z,
+            `Z-value (Left)` = measured_lt_z,
         )
     
 }
@@ -327,7 +330,7 @@ write_result_3 <- function(input) {
 ###############################################################################
 
 drug_master <- 
-    "www/nutrition/drug_master.csv" |> 
+    "www/data/drug_master.csv" |> 
     readr::read_csv(
         col_types = cols(
             `製剤名` = col_character(),
@@ -343,7 +346,7 @@ drug_master <-
     tidyr::pivot_longer(cols = -drug_name, names_to = "element_name")
 
 unit_table <- 
-    "www/nutrition/unit_table.csv" |> 
+    "www/data/unit_table.csv" |> 
     readr::read_csv(col_types = cols(.default = col_character())) |> 
     dplyr::mutate(across(c(digit1, digit2, coef), as.numeric))
 
@@ -606,3 +609,14 @@ create_tpn_table_all <- function(tpnx_table, tpn1_table, tpn2_table) {
 
 ###############################################################################
 ###############################################################################
+
+source("www/modules/module_01_01.R")
+source("www/modules/module_01_02.R")
+source("www/modules/module_01_03.R")
+source("www/modules/module_01.R")
+source("www/modules/module_02.R")
+source("www/modules/module_03.R")
+
+###############################################################################
+###############################################################################
+

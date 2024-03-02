@@ -37,7 +37,7 @@ shinyServer(function(input, output) {
         input |> 
             create_tpn2_table() |> 
             display_tpn_table()
-
+        
     })
     
     output$tpn_table_all <- renderTable({
@@ -128,24 +128,6 @@ shinyServer(function(input, output) {
     output$result_double_1 <- renderText({write_result_double(input, 1)})
     output$result_double_2 <- renderText({write_result_double(input, 2)})
     output$result_double_3 <- renderText({write_result_double(input, 3)})
-    
-    # output$result_1 <- renderText({
-    # 
-    #     write_result_1(input)
-    # 
-    # })
-    # 
-    # output$result_2 <- renderText({
-    #     
-    #     write_result_2(input)
-    #     
-    # })
-    # 
-    # output$result_3 <- renderText({
-    #     
-    #     write_result_3(input)
-    #     
-    # })
     
     # Birth Size
     

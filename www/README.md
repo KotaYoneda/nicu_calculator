@@ -1,5 +1,3 @@
-## NICU Calculator
+# NICU Calculator
 
-This website provides web calculators related to neonatal care.
-
-<https://square.umin.ac.jp/nicucalculator/>
+This website offers specialized web calculators designed for healthcare professionals in neonatology, facilitating accurate clinical assessments and treatment planning for newborns.
